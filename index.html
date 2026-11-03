@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-default">
+    <header>
+        <h1>Local Weather Dashboard</h1>
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Type city name">
+            <button id="search-btn">Search</button>
+        </div>
+        <p id="location-text">Detecting your location...</p>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Current Weather Card -->
+        <section class="card current-weather-card">
+            <h2>Current Conditions</h2>
+            <div id="current-weather">
+                <p class="loading">Accessing atmospheric metrics...</p>
+            </div>
+        </section>
+
+        <!-- 5-Day Forecast Section -->
+        <section class="forecast-section">
+            <h2>5-Day Forecast</h2>
+            <div id="forecast-grid">
+                <!-- Injected dynamically by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

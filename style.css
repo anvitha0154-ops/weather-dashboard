@@ -1,0 +1,137 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #1e293b;
+    transition: background-color 0.5s ease;
+}
+
+/* --- THEME VARIATIONS --- */
+body.theme-clear { background-color: #e0f2fe; }
+body.theme-clear header { background-color: #0284c7; }
+
+body.theme-cloudy { background-color: #f1f5f9; }
+body.theme-cloudy header { background-color: #475569; }
+
+body.theme-rainy { background-color: #e2e8f0; }
+body.theme-rainy header { background-color: #334155; }
+
+body.theme-snowy { background-color: #f8fafc; }
+body.theme-snowy header { background-color: #0f172a; }
+
+body.theme-default { background-color: #f0f4f8; }
+body.theme-default header { background-color: #1e293b; }
+
+header {
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+header h1 { margin: 0 0 15px 0; font-size: 2rem; }
+header p { margin: 15px 0 0 0; color: rgba(255,255,255,0.8); font-weight: 500; font-size: 1.1rem; }
+
+/* --- SEARCH BAR UI --- */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-container button:hover {
+    background-color: #0284c7;
+}
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.temp-large {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #0f172a;
+    margin: 10px 0;
+}
+
+.weather-desc {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #475569;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+.forecast-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* --- 5-Day Forecast Layout --- */
+#forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.forecast-card {
+    background: white;
+    padding: 20px 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border-top: 4px solid #94a3b8;
+}
+
+.forecast-card.clear { border-top-color: #38bdf8; }
+.forecast-card.cloudy { border-top-color: #64748b; }
+.forecast-card.rainy { border-top-color: #3b82f6; }
+.forecast-card.snowy { border-top-color: #93c5fd; }
+
+.forecast-date { font-weight: bold; color: #475569; margin-bottom: 5px; }
+.forecast-desc { font-size: 0.9rem; color: #64748b; margin-bottom: 10px; min-height: 2.4rem; display: flex; align-items: center; justify-content: center; }
+.forecast-temp { font-size: 1.2rem; font-weight: 600; color: #0f172a; }
+.forecast-range { font-size: 0.85rem; color: #94a3b8; margin-top: 5px; }
+.loading { color: #64748b; font-style: italic; }
